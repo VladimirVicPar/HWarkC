@@ -1,0 +1,39 @@
+<?php
+$array = [
+["profession" => "Web Developer", "date" => "2022-11-10", "text" => "Some quick example text to build on the card title and make up the bulk of the card's content1."],
+["profession" => "Front End Developer", "date" => "2022-11-21", "text" => "Some quick example text to build on the card title and make up the bulk of the card's content2."],
+["profession" => "Graphic Designer", "date" => "2022-11-16", "text" => "Some quick example text to build on the card title and make up the bulk of the card's content3."],
+];
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/gogono-cocoa-mochi" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/open-sans" rel="stylesheet">        
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Learn 4</title>
+</head>
+<style>
+body {
+	font-family: 'Gogono Cocoa Mochi', sans-serif;
+}
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+</style>
+<body>
+<?php 
+foreach($array as $key => $value){ ?>
+<div class="card mb-4" style="width: 100%;">
+  <div class="card-body">
+    <h5 class="card-title"><?php echo $array[$key]["profession"]; ?></h5>
+    <span><?php echo $array[$key]["date"]; ?></span>
+    <p class="card-text"><?php echo $array[$key]["text"]; ?></p>
+  </div>
+</div>
+<?php } ?>
+</body>
+</html>
